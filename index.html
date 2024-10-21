@@ -69,14 +69,20 @@
 	</td>
 	</tr>
 
-    </table>
-	<h2>My First JavaScript</h2>
+	    </table  id="myTable">
+	 <h2>My First JavaScript</h2>
+        
+        <button type="button" onclick="hideTable()">Click me</button>
 
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
+        <script>
+            function hideTable() {
+                var table = document.getElementById('myTable');
+                table.style.display = 'none';
+            }
+        </script>
+    </footer>
 
-<p id="demo"></p>
+</html>
 
 </footer>
 
