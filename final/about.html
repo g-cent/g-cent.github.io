@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - My Point Delivery Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2E0070; /* Deep Purple */
+            overflow-x: hidden; /* fixes scaling */
+        }
+
+        header {
+            background-color: #2E0070; /* Deep Purple */
+            color: #FEFEFE;
+            padding: 1em;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            height: 60px;
+            margin-right: 20px;
+        }
+
+        header nav a {
+            color: #EAE7EF; /* Soft Lavender */
+            margin: 0 1em;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 1em;
+        }
+
+        .about-text {
+            margin: 0 auto 2em;
+            max-width: 600px;
+            line-height: 1.6;
+            font-size: 1.2em;
+        }
+
+        .carousel {
+            position: relative;
+            width: 90%; /* width issues*/
+            max-width: 900px; 
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: auto; 
+            border-radius: 8px;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(46, 0, 112, 0.7); /* Semi-transparent deep purple */
+            color: #FEFEFE;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .carousel-button.left {
+            left: 0;
+        }
+
+        .carousel-button.right {
+            right: 0;
+        }
+
+        footer {
+            background-color: #2E0070; /* Deep Purple */
+            color: #FEFEFE;
+            text-align: center;
+            padding: 1em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Screen-Shot-2022-12-19-at-1.31.11-PM.png" alt="My Point Logo">
+        <nav>
+	<nav>
+    <a href="index.html">Home</a>
+    <a href="order.html">Order</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+        </nav>
+    </header>
+
+    <section>
+        <h2>About Us</h2>
+        <p class="about-text">
+In 2023, we set out on a journey to create something meaningful and transformative—MyPoint. As co-founders, Michael Russo and Gio Centofanti poured their hearts and souls into building a platform that would truly make a difference.
+
+Our story is one of grit, innovation, and countless late nights fueled by a shared vision. Michael brought his entrepreneurial spirit and leadership to the table, while Gio, with his unmatched technical expertise, turned complex ideas into seamless software solutions. Together, we navigated challenges, questioned conventional limits, and built a product we are proud to call ours.
+
+From brainstorming sessions that stretched until sunrise to relentless problem-solving, every ounce of effort was worth it. Those long nights and hard-fought battles taught us resilience and brought us closer to realizing our vision for MyPoint.
+
+Today, MyPoint stands as a testament to what’s possible when passion meets purpose. It’s more than a platform—it’s a movement, and we’re just getting started.
+        </p>
+
+        <div class="carousel">
+            <div class="carousel-images" id="carouselImages">
+                <img src="1.JPG" alt="Gio">
+                <img src="2.heic" alt="Process">
+                <img src="3.heic" alt="Mikey">
+            </div>
+            <button class="carousel-button left" onclick="prevSlide()">❮</button>
+            <button class="carousel-button right" onclick="nextSlide()">❯</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Point</p>
+    </footer>
+
+    <script>
+        const carouselImages = document.getElementById('carouselImages');
+        const totalImages = carouselImages.children.length;
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carouselImages.style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        }
+    </script>
+</body>
+</html>
+

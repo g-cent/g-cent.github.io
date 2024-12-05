@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form - My Point Delivery Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2E0070; /* Deep Purple */
+        }
+
+        header {
+            background-color: #2E0070; /* Deep Purple */
+            color: #FEFEFE;
+            padding: 1em;
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+ header img {
+            height: 60px;
+            margin-right: 20px;
+        }
+        header nav a {
+            color: #EAE7EF; /* Soft Lavender */
+            margin: 0 1em;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        form {
+            background-color: #C0B7D1; /* Dusty Lilac */
+            padding: 2em;
+            margin: auto;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form input, form select, form textarea, form button {
+            width: calc(100% - 20px);
+            margin-bottom: 1em;
+            padding: 0.5em;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        form button {
+            background-color: #A194BC; /* Muted Berry */
+            color: #FEFEFE;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #2E0070; /* Deep Purple */
+        }
+
+        footer {
+            background-color: #2E0070; /* Deep Purple */
+            color: #FEFEFE;
+            text-align: center;
+            padding: 1em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Modal card form css */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 700px;
+            text-align: left;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-50 {
+            flex: 50%;
+            padding: 10px;
+        }
+
+        .btn {
+            background-color: #2E0070;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .btn:hover {
+            background-color: #A194BC;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Screen-Shot-2022-12-19-at-1.31.11-PM.png" alt="My Point Logo">
+        
+<nav>
+    <a href="index.html">Home</a>
+    <a href="order.html">Order</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+    </header>
+
+    <section>
+        <h2>Order Form</h2>
+        <form onsubmit="showPaymentModal(event)">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="location">Delivery Location:</label>
+            <select id="location" name="location" required>
+                <option value="">Select your location</option>
+                <option value="congdon">Congdon School of Health and Science</option>
+                <option value="pharmacy">Wilson School of Pharmacy</option>
+                <option value="village1">Village 1</option>
+                <option value="village2">Village 2</option>
+                <option value="panther">Panther Commons</option>
+                <option value="cent1">Cent 1</option>
+                <option value="cent2">Cent 2</option>
+                <option value="blessing">Blessing</option>
+                <option value="Caffey">Caffey</option>
+                <option value="york">York</option>
+                <option value="town">Town Homes</option>
+
+
+
+
+
+
+            </select>
+
+            <label for="houseNumber">House/Room Number:</label>
+            <input type="text" id="houseNumber" name="houseNumber" placeholder="Enter your house or room number" required>
+
+            <label for="numPeople">How Many People Ordered?</label>
+            <input type="number" id="numPeople" name="numPeople" min="1" placeholder="Enter the number of people" required>
+
+            <label for="names">Names on the Order:</label>
+            <textarea id="names" name="names" placeholder="Enter names, separated by commas" rows="3" required></textarea>
+
+            <label for="whereFrom">Where Did You Order From?</label>
+            <select id="whereFrom" name="whereFrom" required>
+                <option value="">Select a dining option</option>
+                <option value="butterfly">Butterfly Cafe</option>
+                <option value="chickfila">Chick-Fil-A</option>
+                <option value="grille">The Grille</option>
+                <option value="silverline">Silver Line</option>
+                <option value="starbucks">Cottrell Starbucks</option>
+                <option value="subway">Subway</option>
+                <option value="jamba">Jamba Juice</option>
+                <option value="market">Market at Yadkin</option>
+                <option value="barbs">Barbaritos</option>
+                <option value="point">The Point</option>
+
+
+            
+
+</select>
+
+            <label for="food">Food Order:</label>
+            <textarea id="food" name="food" placeholder="Enter your order details" rows="4" required></textarea>
+
+            <label for="utensils">Utensils:</label>
+            <select id="utensils" name="utensils" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="time">Pick-Up Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="receipt">Upload Receipt Picture:</label>
+            <input type="file" id="receipt" name="receipt" accept="image/*" required>
+
+            <label for="agreement">
+                <input type="checkbox" id="agreement" name="agreement" required>
+                I agree that My Point is not responsible for the food.
+            </label>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Point</p>
+    </footer>
+
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <h3>Billing and Payment</h3>
+            <div class="row">
+                <div class="col-50">
+                    <h3>Billing Address</h3>
+                    <label for="fname">Full Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
+                    <label for="adr">Address</label>
+                    <input type="text" id="adr" name="address" placeholder="123 Main St" required>
+                </div>
+                <div class="col-50">
+                    <h3>Payment</h3>
+                    <label for="cname">Name on Card</label>
+                    <input type="text" id="cname" name="cardname" placeholder="John Doe" required>
+                    <label for="ccnum">Credit Card Number</label>
+                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+                    <label for="expmonth">Exp Month</label>
+                    <input type="text" id="expmonth" name="expmonth" placeholder="January" required>
+                    <div class="row">
+                        <div class="col-50">
+                            <label for="expyear">Exp Year</label>
+                            <input type="text" id="expyear" name="expyear" placeholder="2025" required>
+                        </div>
+                        <div class="col-50">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn" onclick="validatePayment()">Pay $5.00</button>
+            <button class="btn" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        function showPaymentModal(event) {
+            event.preventDefault();
+            document.getElementById('paymentModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+
+        function validatePayment() {
+            const cardNumber = document.getElementById('ccnum').value;
+            const expMonth = document.getElementById('expmonth').value.toLowerCase();
+            const expYear = parseInt(document.getElementById('expyear').value);
+            const cvv = document.getElementById('cvv').value;
+
+            const months = [
+                "january", "february", "march", "april", "may", "june",
+                "july", "august", "september", "october", "november", "december"
+            ];
+
+            if (!/^\d{4}-\d{4}-\d{4}-\d{4}$/.test(cardNumber)) {
+                alert("Invalid card number format. Use: 1111-2222-3333-4444");
+                return;
+            }
+
+            if (!months.includes(expMonth)) {
+                alert("Invalid expiration month. Use a full month name.");
+                return;
+            }
+
+            if (isNaN(expYear) || expYear < new Date().getFullYear()) {
+                alert("Invalid expiration year. Use a future year.");
+                return;
+            }
+
+            if (cvv.length < 3 || cvv.length > 4 || isNaN(cvv)) {
+                alert("Invalid CVV. Must be 3 or 4 digits.");
+                return;
+            }
+
+            alert("Payment successful! Your order has been placed.");
+            closeModal();
+        }
+    </script>
+</body>
+</html>
+
