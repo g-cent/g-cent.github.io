@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Projects - Giovanni Centofanti</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        header {
+            background-color: #65DEF1;
+            padding: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: bold;
+            border-bottom: 5px solid #A8DCD1;
+        }
+
+        nav {
+            background-color: #A8DCD1;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #084887;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #F96900;
+            color: #FFFFFF;
+        }
+
+        h1 {
+            color: #084887;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2.5rem;
+        }
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background-color: #FFFFFF;
+            border: 2px solid #A8DCD1;
+            border-radius: 10px;
+            width: 300px;
+            padding: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card h3 {
+            color: #084887;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            color: #084887;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card a {
+            color: #F96900;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #F17F29;
+            text-align: center;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Projects - Giovanni Centofanti
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>My Projects</h1>
+        <div class="project-container">
+            
+            <div class="project-card">
+                <h3>NFL Database</h3>
+                <p>Collaborated with a group to design and implement a functional NFL database for real-world use. This database includes views, detailed player stats, and team management functionalities. The project demonstrated database design principles and SQL expertise.</p>
+                <a href="final.sql" download>Download SQL File</a>
+            </div>
+
+            
+            <div class="project-card">
+                <h3>Networking Project</h3>
+                <p>Transferred a GNS3 virtual network configuration to real hardware. Configured services including DNS, NAT, and VLANs on enterprise Cisco routers and Layer 3 switches, applying real-world networking practices.</p>
+                <a href="final.zip" download>Download GNS3 Project</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <small>
+            <i>Copyright © 2024 Giovanni Centofanti</i><br>
+            <a href="mailto:gcentofa@highpoint.edu">gcentofa@highpoint.edu</a>
+        </small>
+    
+<div>
+    <button type="button" onclick="toggleTable()">Toggle Color Palette</button>
+    <table id="colorTable" style="display:none; width: 100%; margin-top: 10px;">
+        <tr>
+            <td style="background-color: #65DEF1; height: 50px;"></td>
+            <td style="background-color: #A8DCD1; height: 50px;"></td>
+            <td style="background-color: #DCE2C8; height: 50px;"></td>
+            <td style="background-color: #F96900; height: 50px;"></td>
+            <td style="background-color: #F17F29; height: 50px;"></td>
+        </tr>
+    </table>
+</div>
+</footer>
+
+<script>
+    function toggleTable() {
+        var table = document.getElementById('colorTable');
+        if (table.style.display === 'none' || table.style.display === '') {
+            table.style.display = 'table';
+        } else {
+            table.style.display = 'none';
+        }
+    }
+</script>
+</body>
+</html>
+

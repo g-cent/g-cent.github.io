@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Welcome - Gio Centofanti</title>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        header {
+            background-color: #65DEF1;
+            padding: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: bold;
+            border-bottom: 5px solid #A8DCD1;
+        }
+
+        nav {
+            background-color: #A8DCD1;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #084887;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #F96900;
+            color: #FFFFFF;
+        }
+
+        h1, h2 {
+            color: #084887;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        ul li {
+            margin: 10px 0;
+            color: #084887;
+            font-size: 1.2rem;
+        }
+
+        blockquote {
+            font-style: italic;
+            text-align: center;
+            color: #F96900;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #FFF5E6;
+            border-left: 5px solid #F17F29;
+            width: 60%;
+            border-radius: 5px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #F17F29;
+            text-align: center;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Welcome to Gio Centofanti's Website!
+    </header>
+
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+
+    <main>
+        <h2>List of Accomplishments</h2>
+        <ul>
+            <li>First Place in US Cyber Challenge CTF</li>
+            <li>Top 10 TracerFIRE Competition</li>
+            <li>Top Player NCL</li>
+            <li>Top 10 UConn Competition</li>
+            <li>Top 100 Individually NCL</li>
+        </ul>
+
+        <blockquote>Hack the Planet!</blockquote>
+        <img src="hpu.png" alt="High Point University Logo">
+    </main>
+
+    <footer>
+        <small>
+            <i>Copyright © 2024 Gio Centofanti</i><br>
+            <a href="mailto:gcentofa@highpoint.edu">Gio Centofanti</a>
+        </small>
+    
+<div>
+    <button type="button" onclick="toggleTable()">Toggle Color Palette</button>
+    <table id="colorTable" style="display:none; width: 100%; margin-top: 10px;">
+        <tr>
+            <td style="background-color: #65DEF1; height: 50px;"></td>
+            <td style="background-color: #A8DCD1; height: 50px;"></td>
+            <td style="background-color: #DCE2C8; height: 50px;"></td>
+            <td style="background-color: #F96900; height: 50px;"></td>
+            <td style="background-color: #F17F29; height: 50px;"></td>
+        </tr>
+    </table>
+</div>
+</footer>
+
+<script>
+    function toggleTable() {
+        var table = document.getElementById('colorTable');
+        if (table.style.display === 'none' || table.style.display === '') {
+            table.style.display = 'table';
+        } else {
+            table.style.display = 'none';
+        }
+    }
+</script>
+</body>
+</html>
+

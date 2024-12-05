@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Contact - Gio Centofanti</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        header {
+            background-color: #65DEF1;
+            padding: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: bold;
+            border-bottom: 5px solid #A8DCD1;
+        }
+
+        nav {
+            background-color: #A8DCD1;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #084887;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #F96900;
+            color: #FFFFFF;
+        }
+
+        h1 {
+            color: #084887;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2.5rem;
+        }
+
+        .form-container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border: 2px solid #A8DCD1;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container label {
+            font-size: 1rem;
+            color: #084887;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #A8DCD1;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #084887;
+        }
+
+        .form-container button {
+            background-color: #65DEF1;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #F96900;
+        }
+
+        footer {
+            background-color: #F17F29;
+            text-align: center;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Contact - Gio Centofanti
+    </header>
+
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+
+    <main>
+        <h1>Contact Me</h1>
+        <div class="form-container">
+            <form onsubmit="handleSubmit(event)">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Your first name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Your last name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number" pattern="[0-9]{10}" title="Enter a valid 10-digit phone number" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <small>
+            <i>Copyright © 2024 Gio Centofanti</i><br>
+            <a href="mailto:gcentofa@highpoint.edu">Gio Centofanti</a>
+        </small>
+    
+<div>
+    <button type="button" onclick="toggleTable()">Toggle Color Palette</button>
+    <table id="colorTable" style="display:none; width: 100%; margin-top: 10px;">
+        <tr>
+            <td style="background-color: #65DEF1; height: 50px;"></td>
+            <td style="background-color: #A8DCD1; height: 50px;"></td>
+            <td style="background-color: #DCE2C8; height: 50px;"></td>
+            <td style="background-color: #F96900; height: 50px;"></td>
+            <td style="background-color: #F17F29; height: 50px;"></td>
+        </tr>
+    </table>
+</div>
+</footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("Your information has been received!");
+        }
+    </script>
+
+<script>
+    function toggleTable() {
+        var table = document.getElementById('colorTable');
+        if (table.style.display === 'none' || table.style.display === '') {
+            table.style.display = 'table';
+        } else {
+            table.style.display = 'none';
+        }
+    }
+</script>
+</body>
+</html>
+

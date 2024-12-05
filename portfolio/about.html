@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>About Me - Giovanni Centofanti</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        header {
+            background-color: #65DEF1;
+            padding: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: bold;
+            border-bottom: 5px solid #A8DCD1;
+        }
+
+        nav {
+            background-color: #A8DCD1;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #084887;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #F96900;
+            color: #FFFFFF;
+        }
+
+        .about-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #FFFFFF;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+        }
+
+        .about-section h1 {
+            color: #084887;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            color: #084887;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid #A8DCD1;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .interests-section {
+            margin: 20px auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .interests-section h2 {
+            color: #084887;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .interests-section ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .interests-section ul li {
+            background-color: #A8DCD1;
+            color: #084887;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #F17F29;
+            text-align: center;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        About Me - Giovanni Centofanti
+    </header>
+
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+
+    <main>
+        <section class="about-section">
+            <img src="1.jpg" alt="Giovanni Centofanti">
+            <h1>Hello, I'm Giovanni Centofanti!</h1>
+            <p>
+                I am a passionate Cybersecuirty major from Avon, CT, currently pursuing my education at High Point University.
+                I have a keen interest in cybersecurity, programming, and web development, I enjoy tackling challenges and pushing the boundaries of technology.
+            </p>
+            <p>
+                You can find me skiing, playing baseball, or enjoying a good game of football.
+                My curiosity and the rapid growth of technology keep me constantly exploring and expanding my skill set.
+            </p>
+        </section>
+
+        <section class="interests-section">
+            <h2>Interests</h2>
+            <ul>
+                <li>Football</li>
+                <li>Skiing</li>
+                <li>Baseball</li>
+                <li>Going to the Cape</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <small>
+            <i>Copyright © 2024 Giovanni Centofanti</i><br>
+            <a href="mailto:gcentofa@highpoint.edu">gcentofa@highpoint.edu</a>
+        </small>
+    
+<div>
+    <button type="button" onclick="toggleTable()">Toggle Color Palette</button>
+    <table id="colorTable" style="display:none; width: 100%; margin-top: 10px;">
+        <tr>
+            <td style="background-color: #65DEF1; height: 50px;"></td>
+            <td style="background-color: #A8DCD1; height: 50px;"></td>
+            <td style="background-color: #DCE2C8; height: 50px;"></td>
+            <td style="background-color: #F96900; height: 50px;"></td>
+            <td style="background-color: #F17F29; height: 50px;"></td>
+        </tr>
+    </table>
+</div>
+</footer>
+
+<script>
+    function toggleTable() {
+        var table = document.getElementById('colorTable');
+        if (table.style.display === 'none' || table.style.display === '') {
+            table.style.display = 'table';
+        } else {
+            table.style.display = 'none';
+        }
+    }
+</script>
+</body>
+</html>
+
